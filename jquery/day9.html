@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery day-9 zoom plugin</title>
+    <link rel="stylesheet" href="zoomple.css">
+</head>
+<body>
+    <a href="images/s1.jpg" class="zoomple"><img src="images/s1.jpg" height="250px" width="400px"> </a>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="zoomple.js"></script>
+    <script>
+        $(document).ready(function() { 
+            $('.zoomple').zoomple({ 
+                blankURL : 'images/blank.gif',
+                bgColor : 'white',
+                loaderURL : 'images/loader.gif',
+                offset : {x:-100,y:100},
+                zoomWidth : 200,  
+                zoomHeight : 200,
+                roundedCorners : false,
+                attachWindowToMouse:false,
+                windowPosition: {x:"right",y:"bottom"},
+                /*delay : 1000,*/
+                showCursor:false,
+                showOverlay:true
+            });
+        });
+    </script>
+</body>
+</html>

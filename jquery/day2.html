@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery day-2 fading functions (fadeOut, fadeIn, fadeToggle, fadeTo), mouseover, mouseout events</title>
+</head>
+<body>
+    <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquid architecto cum vitae aspernatur eveniet culpa officiis, neque temporibus. Aperiam nam ipsa odio ipsam modi ex, quam laboriosam vero officiis atque blanditiis porro, animi, enim beatae commodi quas est perferendis? Libero laborum asperiores provident culpa doloribus eligendi animi repellat enim recusandae velit assumenda voluptatibus odit sit quasi error hic, optio inventore ipsam dicta laboriosam exercitationem corrupti modi. Aut quibusdam reprehenderit, doloribus, esse dolor vel eos iure enim suscipit corrupti nam rem mollitia quaerat doloremque, eaque ab temporibus impedit explicabo. Voluptatum vitae temporibus delectus quod, natus magni repellendus consequatur fugiat harum!</p>
+
+    <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquid architecto cum vitae aspernatur eveniet culpa officiis, neque temporibus. Aperiam nam ipsa odio ipsam modi ex, quam laboriosam vero officiis atque blanditiis porro, animi, enim beatae commodi quas est perferendis? Libero laborum asperiores provident culpa doloribus eligendi animi repellat enim recusandae velit assumenda voluptatibus odit sit quasi error hic, optio inventore ipsam dicta laboriosam exercitationem corrupti modi. Aut quibusdam reprehenderit, doloribus, esse dolor vel eos iure enim suscipit corrupti nam rem mollitia quaerat doloremque, eaque ab temporibus impedit explicabo. Voluptatum vitae temporibus delectus quod, natus magni repellendus consequatur fugiat harum!</p>
+
+    
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <!-- fading functions (fadeOut, fadeIn, fadeToggle, fadeTo) -->
+
+    <!-- fadeOut, fadeIn -->
+    <script>
+        $("p").click(function(){
+            $(this).fadeOut(2000).delay(1000).fadeIn(2000);
+        })
+    </script>
+
+    <!-- fadeToggle -->
+    <button>Toggle Button</button><br><br>
+    <img src="images/4.jpg" height="300px">
+    <script>
+        $("img").hide();
+        $("button").click(function(){
+            $("img").fadeToggle(1000);
+        })
+    </script>
+
+    <!-- fadeTo -->
+    <script>
+        $("p").mouseover(function(){
+            // $(this).fadeTo(2000,0.3)
+            $(this).fadeTo(2000,0)
+
+            /* $(selector).fadeTo(time in millisec,opacity value) , opacity is used to transparent the element. Its value lies between 0 & 1 */
+        })
+
+        $("p").mouseout(function(){
+            $(this).fadeTo(2000,1)
+        })
+    </script>
+</body>
+</html>

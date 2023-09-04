@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery day-3 collapsible panel, accordion, css with Jquery, hover event</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            font-family: calibri;
+        }
+        section
+        {
+            background-color: lightyellow;
+            width: 40%;
+            padding: 10px;
+            border: 1px solid blue;
+        }
+        section button
+        {
+            width: 100%;
+            background-color: lightblue;
+            padding: 7px;
+            border: 1px solid blue;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+        section div
+        {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <button>Button1</button>
+        <div>
+            1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid eum reiciendis fugiat minus neque dolor eos deleniti esse repellendus, facere cupiditate tempore officiis doloremque, doloribus eius, ipsa dicta rerum inventore sed totam veritatis. Excepturi aliquam hic nulla qui, saepe, maxime ullam voluptatum sit facilis facere numquam est a neque iste, vero odio quia? Atque dolorem ad qui beatae molestias in suscipit earum laudantium totam repellendus eius debitis, fuga hic voluptatem ab nulla optio ipsa fugit temporibus. Aliquid id consectetur natus obcaecati eveniet et perferendis reiciendis? Nam quas esse minus repellat, voluptatibus nihil, provident facilis natus explicabo accusamus cupiditate repudiandae temporibus!
+        </div>
+
+        <button>Button2</button>
+        <div>
+            2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid eum reiciendis fugiat minus neque dolor eos deleniti esse repellendus, facere cupiditate tempore officiis doloremque, doloribus eius, ipsa dicta rerum inventore sed totam veritatis. Excepturi aliquam hic nulla qui, saepe, maxime ullam voluptatum sit facilis facere numquam est a neque iste, vero odio quia? Atque dolorem ad qui beatae molestias in suscipit earum laudantium totam repellendus eius debitis, fuga hic voluptatem ab nulla optio ipsa fugit temporibus. Aliquid id consectetur natus obcaecati eveniet et perferendis reiciendis? Nam quas esse minus repellat, voluptatibus nihil, provident facilis natus explicabo accusamus cupiditate repudiandae temporibus!
+        </div>
+    </section>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <!-- collapsible panel -->
+    <!-- <script>
+        $("div").hide();
+        $("button").click(function(){
+            $(this).next("div").slideToggle(1000);
+        })
+    </script> -->
+
+    <!-- accordion -->
+    <script>
+        $("div").hide();
+        $("button").click(function(){
+            $("div").slideUp(1000);
+            $(this).next("div").slideDown(1000);
+        })
+    </script>
+
+    <!-- css with Jquery -->
+    <h1>Main Heading</h1>
+    <!-- <script>
+        $("h1").mouseover(function(){
+            $(this).css({color:"red",textDecoration:"underline"})
+        })
+
+        $("h1").mouseout(function(){
+            $(this).css({color:"",textDecoration:""})
+        })
+    </script> -->
+
+    <script>
+        /* $(selector).hover(function(){
+            code for mouseover
+        },function(){
+            code for mouseout
+        }) */
+
+        $("h1").hover(function(){
+            $(this).css({color:"red",textDecoration:"underline"})
+        },function(){
+            $(this).css({color:"",textDecoration:""})
+        })
+    </script>
+</body>
+</html>

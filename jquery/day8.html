@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery day-8 dropdown</title>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        *
+        {
+            box-sizing: border-box;
+            font-family: calibri;
+        }
+        #header
+        {
+            height: 80px;
+            background-color: black;
+            color: white;
+        }
+        .container
+        {
+            width: 1170px;
+            height: 100%;
+            margin: auto;
+        }
+        .logo
+        {
+            width: 30%;
+            float: left;
+        }
+        .nav
+        {
+            width: 70%;
+            float: left;
+        }
+        .nav ul
+        {
+            list-style-type: none;
+            margin-top: 25px;
+        }
+        .nav a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        .nav li
+        {
+            display: inline-block;
+            font-size: 1.4em;
+            margin-right: 20px;
+            padding: 5px;
+        }
+
+        /* dropdown css start */
+        li.dropdown
+        {
+            position: relative;
+        }
+        ol.dropdown-menu
+        {
+            position: absolute;
+            background-color: red;
+            padding: 0%;
+            padding: 5px;
+            /* display: none; */
+        }
+        ol.dropdown-menu li
+        {
+            font-size: 1em;
+        }
+        /* li.dropdown:hover > ol.dropdown-menu
+        {
+            display: block;
+        } */
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Interior Spa</h1>
+            </div>
+            <!-- logo close -->
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="dropdown"><a href="#">Services <img src="images/caret-down.png" height="15px"></a>
+                        <ol class="dropdown-menu">
+                            <li><a href="#">Service1</a></li>
+                            <li><a href="#">Service2</a></li>
+                            <li><a href="#">Service3</a></li>
+                            <li><a href="#">Service4</a></li>
+                        </ol>
+                    </li>
+                    <li class="dropdown"><a href="#">Pages <img src="images/caret-down.png" height="15px"></a>
+                        <ol class="dropdown-menu">
+                            <li><a href="#">Page1</a></li>
+                            <li><a href="#">Page2</a></li>
+                            <li><a href="#">Page3</a></li>
+                            <li><a href="#">Page4</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <!-- nav close -->
+        </div>
+    </div>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $("ol.dropdown-menu").hide();
+        $("li.dropdown").click(function(){
+            $("ol.dropdown-menu",this).toggle();
+        })
+    </script>
+</body>
+</html>

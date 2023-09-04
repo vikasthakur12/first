@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery day-5 password hide/show, phone no validation with keyup event</title>
+    <style>
+        .pass
+        {
+            position: relative;
+        }
+        .open,.close
+        {
+            margin-left: -30px;
+            position: absolute;
+            top: 4%;
+        }
+    </style>
+</head>
+<body>
+    <!-- password hide/show -->
+    <input type="password" placeholder="Enter Password" class="pass">
+    <img src="images/view.png" height="16px" class="open">
+    <img src="images/hidden.png" height="16px" class="close"><br><br>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(".close").hide();
+
+        $(".open").click(function(){
+            $(".pass").attr("type","text")
+            $(".open").hide();
+            $(".close").show();
+        })
+
+        $(".close").click(function(){
+            $(".pass").attr("type","password")
+            $(".close").hide();
+            $(".open").show();
+        }) 
+    </script>
+
+    <!-- phone no validation with keyup event -->
+    <input type="tel" class="phone" placeholder="Enter Phone No" pattern="^[0-9]+$">
+    <output></output>
+
+    <script>
+        $(".phone").keyup(function(){
+            var pval=$(this).val();
+            var p=$(this).attr("pattern");
+            if(!(pval.match(p)))
+            {
+                $("output").html("Invalid")
+            }
+            else
+            {
+                $("output").html("")
+            }
+        })
+    </script>
+</body>
+</html>

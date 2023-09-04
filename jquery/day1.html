@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery day-1 hide, delay, show, toggle, slideUp, slideDown, slideToggle functions</title>
+</head>
+<body>
+    <p class="p1">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquid architecto cum vitae aspernatur eveniet culpa officiis, neque temporibus. Aperiam nam ipsa odio ipsam modi ex, quam laboriosam vero officiis atque blanditiis porro, animi, enim beatae commodi quas est perferendis? Libero laborum asperiores provident culpa doloribus eligendi animi repellat enim recusandae velit assumenda voluptatibus odit sit quasi error hic, optio inventore ipsam dicta laboriosam exercitationem corrupti modi. Aut quibusdam reprehenderit, doloribus, esse dolor vel eos iure enim suscipit corrupti nam rem mollitia quaerat doloremque, eaque ab temporibus impedit explicabo. Voluptatum vitae temporibus delectus quod, natus magni repellendus consequatur fugiat harum!</p>
+
+    <p class="p2">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquid architecto cum vitae aspernatur eveniet culpa officiis, neque temporibus. Aperiam nam ipsa odio ipsam modi ex, quam laboriosam vero officiis atque blanditiis porro, animi, enim beatae commodi quas est perferendis? Libero laborum asperiores provident culpa doloribus eligendi animi repellat enim recusandae velit assumenda voluptatibus odit sit quasi error hic, optio inventore ipsam dicta laboriosam exercitationem corrupti modi. Aut quibusdam reprehenderit, doloribus, esse dolor vel eos iure enim suscipit corrupti nam rem mollitia quaerat doloremque, eaque ab temporibus impedit explicabo. Voluptatum vitae temporibus delectus quod, natus magni repellendus consequatur fugiat harum!</p>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <!-- <script>
+        $(".p1").click(function(){
+            $(".p1").hide(2000);             /* time in milliseconds */
+        })
+
+        $(".p2").click(function(){
+            $(".p2").hide(2000);             /* time in milliseconds */
+        })
+    </script> -->
+
+    <!-- hide, delay, show -->
+    <!-- <script>
+        $("p").click(function(){
+            $(this).hide(2000).delay(1000).show(2000);             /* time in milliseconds */
+        })
+    </script> -->
+
+    <!-- toggle function -->
+    <button>Toggle Button</button><br><br>
+    <img src="images/4.jpg" height="300px">
+    <!-- <script>
+        $("img").hide();
+        $("button").click(function(){
+            $("img").toggle(1000);
+        })
+    </script> -->
+
+    <!-- slideUp, slideDown -->
+    <script>
+        $("p").click(function(){
+            $(this).slideUp(2000).delay(1000).slideDown(2000);
+        })
+    </script>
+
+    <!-- slideToggle function -->
+    <script>
+        $("button").click(function(){
+            $(".p2").slideToggle(1000);
+        })
+    </script>
+</body>
+</html>

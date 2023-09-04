@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery day-4 image preview with mouseover effect</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+        .small
+        {
+            height: 100px;
+            width: 100px;
+            object-fit: contain;        /* adjust large size image in small area */
+        }
+        .div1
+        {
+            height: 500px;
+            width: 500px;
+            /* background-color: lightblue; */
+        }
+        .big
+        {
+            height: 450px;
+            width: 450px;
+            object-fit: contain;        /* adjust large size image in small area */
+        }
+        /* .small:hover
+        {
+            border: 2px solid orange;
+        } */
+
+        .bd
+        {
+            border: 2px solid orange;
+            box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+        }
+    </style>
+</head>
+<body>
+    <img src="images/p1.jpg" class="small bd">
+    <img src="images/p2.jpg" class="small">
+    <img src="images/p3.jpg" class="small">
+    <img src="images/p4.jpg" class="small">
+    <img src="images/p5.jpg" class="small">
+    <img src="images/p6.jpg" class="small">
+
+    <div class="div1">
+        <img src="images/p1.jpg" class="big">
+    </div>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(".small").mouseover(function(){
+            $(".div1").empty();
+            $(this).addClass("bd").siblings(".small").removeClass("bd")
+            $(this).clone().addClass("big").appendTo(".div1");
+            $(".big").css({border:"0px",boxShadow:"none"})
+
+        })
+
+        /* $(".small").mouseout(function(){
+            $(".div1").empty();
+        }) */
+    </script>
+</body>
+</html>
